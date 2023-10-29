@@ -20,23 +20,23 @@ $(document).ready(function () {
             {
               data: flushValues,
               label: "Flush",
-              borderColor: "#3cba9f",
+              borderColor: "#14A44D",
               fill: false,
-              backgroundColor: "#3cba9f",
+              backgroundColor: "#14A44D",
             },
             {
               data: tidakFlushValues,
               label: "Tidak Flush",
-              borderColor: "#8e5ea2",
+              borderColor: "#DC4C64",
               fill: false,
-              backgroundColor: "#8e5ea2",
+              backgroundColor: "#DC4C64",
             },
           ],
         },
         options: {
           title: {
             display: true,
-            text: "Perbandingan Pengguna Toilet yang Memencet Flush dan Tidak",
+            text: "Comparison of Toilet User Ethics",
           },
         },
       });

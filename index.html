@@ -13,7 +13,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Secondary theme CSS (customized) -->
-        <link href="css/customStyles.css" rel="stylesheet" href="">
+        <link href="css/customStyles.css" rel="stylesheet">
         <!-- Custom styles for this page -->
         <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
         
@@ -30,15 +30,15 @@
             <!-- NAVIGATION BAR -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html">Fluzz Team</a>
+                    <a class="navbar-brand text-warning" href="index.html">Fluzz Team</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#features">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#flush">Flush Monitoring</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#record">Table Record</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="#features">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="#flush">Flush Monitoring</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="#record">Table Record</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="#team">Team</a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,12 +53,12 @@
                                 <h1 class="display-5 fw-bolder text-white mb-2">TOILET MONITORING SYSTEM</h1>
                                 <p class="lead fw-normal text-white-50 mb-4">Flush monitoring ini dilengkapi dengan lalalala lalalala lalalal</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                                    <!--<a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a> -->
+                                    <a class="btn btn-warning btn-lg px-4 me-sm-3" href="#features">Get Started</a>
+                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/header.png" alt="Dashboard Header" /></div>
                     </div>
                 </div>
             </header>
@@ -72,22 +72,22 @@
                         <div class="col-lg-8">
                             <div class="row gx-5 row-cols-1 row-cols-md-2">
                                 <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <div class="feature bg-warning bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
                                     <h2 class="h5">Featured title</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <div class="feature bg-warning bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
                                     <h2 class="h5">Featured title</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col mb-5 mb-md-0 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-warning bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
                                     <h2 class="h5">Featured title</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <div class="feature bg-warning bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
                                     <h2 class="h5">Featured title</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
@@ -98,9 +98,9 @@
             </section>
 
             <!-- MONITORING SECTION -->
-            <section class="py-5 bg-black" id="flush">
+            <section class="py-5 bg-dark" id="flush">
                 <div class="container px-5 my-5">
-                    <h2 class="text-center mb-5 text-white">Graphs Monitoring</h2>
+                    <h2 class="text-center mb-5 text-light">Graphs Monitoring</h2>
                     <div class="row gx-5">
 
                         <!-- MONITORING PERTAMA - TOTAL PENGGUNA TOILET SELAMA PENGUJIAN-->
@@ -109,14 +109,14 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Pengguna Toilet </div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Toilet Users </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
                                                         <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="bar1-value"></div>
                                                         </div>
                                                             <div class="col">
                                                                 <div class="progress progress-sm mr-2">
-                                                                    <div class="progress-bar bg-info" id="bar1" role="progressbar" aria-valuemin="0" aria-valuemax="500"></div>
+                                                                    <div class="progress-bar bg-primary" id="bar1" role="progressbar" aria-valuemin="0" aria-valuemax="500"></div>
                                                                 </div>
                                                             </div>
                                                 </div>
@@ -135,14 +135,14 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Flushed  </div>
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Flushed  </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="bar2-value"></div>
                                                     </div>
                                                         <div class="col">
                                                             <div class="progress progress-sm mr-2">
-                                                                <div class="progress-bar bg-info" id="bar2" role="progressbar"
+                                                                <div class="progress-bar bg-primary" id="bar2" role="progressbar"
                                                                     aria-valuemin="0"
                                                                     aria-valuemax="100"></div>
                                                             </div>
@@ -163,7 +163,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">STATUS SISTEM </div>
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">STATUS SISTEM </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">ON/OFF</div>
@@ -181,7 +181,7 @@
                     <!-- MONITORING KEEMPAT - GRAFIK JUMLAH FLUSHED PER HARI-->
                     <div class="col-xl-6">
                         <div class="card mb-4">
-                            <div class="card-header text-xs font-weight-bold text-info text-uppercase mb-1">
+                            <div class="card-header text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 <i class="fas fa-chart-area me-1"></i>
                                 Area Chart Example
                             </div>
@@ -194,7 +194,7 @@
                     <!-- BAGIAN MONITORING BAR CHART -->
                     <div class="col-xl-6">
                         <div class="card mb-4">
-                            <div class="card-header text-xs font-weight-bold text-info text-uppercase mb-1">
+                            <div class="card-header text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 <i class="fas fa-chart-area me-1"></i>
                                 Weekly Chart of Toilet Users Behavior
                             </div>
@@ -222,7 +222,7 @@
 
             <!-- DATA RECORD TABLE MONITORING SECTION-->
 
-            <div class="mt-5 py-5 bg-light" id="record">
+            <div class="mt-1 py-5 bg-light" id="record">
                 <h2 class="text-center">Data Record Monitoring</h2>
                 <div class="container px-5 my-5">
 
@@ -255,7 +255,7 @@
 
             <!-- TEAM TESTIMONI SECTION -->
 
-            <section class="py-5">
+            <section class="py-5 bg-warning">
                 <div class="container px-5 my-5" id="team">
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
@@ -413,6 +413,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <!-- <script src="vendor/chart.js/chart-area-demo.js"></script> -->
         <script src="realtimeData/areaChart.js"></script>
+        
         <!-- Bar Chart -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
         <script src = "realtimeData/flushChart.js"></script>
