@@ -1,43 +1,11 @@
-// // Function to fetch data from PHP script and update the progress bar
-// async function updateProgressBar() {
-//     const phpScriptURL = 'realtimeData/data.php'; // Ganti dengan URL skrip PHP yang mengambil data
-  
-//     const response = await fetch(phpScriptURL);
-//     const data = await response.json();
-  
-//     // Hitung total pengguna toilet yang menekan flush (user_flush = 1)
-//     const totalFlushed = data.filter(item => item.user_flush === '1').length; // Menggunakan '1' untuk mencocokkan dengan tipe data string dari database
-//     console.log(totalFlushed);
-  
-//     // Update progress bar untuk total pengguna toilet yang menekan flush
-//     updateProgressBar(totalFlushed, 'bar2', 'bar2-value');
-//   }
-  
-//   // Function untuk mengupdate progress bar
-//   function updateProgressBar(total, progressBarId, valueId) {
-//     // Update value
-//     const valueElement = document.querySelector(`#${valueId}`);
-//     valueElement.textContent = total;
-  
-//     // Update progress bar
-//     const progressBar = document.querySelector(`#${progressBarId}`);
-//     const progressValue = (total / 100) * 100; // Ganti 100 dengan total maksimum yang sesuai
-//     progressBar.style.width = `${progressValue}%`;
-//     progressBar.setAttribute('aria-valuenow', progressValue);
-//   }
-  
-//   // Panggil function updateProgressBar untuk mengambil data dan mengupdate progress bar
-//   document.addEventListener('DOMContentLoaded', function() {
-//     updateProgressBar();
-//   });
-
-  // Function to fetch total users from PHP script and update the progress bar
-async function updateProgressBar() {
+  async function updateProgressBar() {
     const phpScriptURL = 'realtimeData/data.php'; // Ganti dengan URL skrip PHP yang mengambil total pengguna toilet
     const response = await fetch(phpScriptURL);
     const data = await response.json();
-  
-    const totalFlushed = data.filter(item => item.user_flush === '1').length; // Menggunakan '1' untuk mencocokkan dengan tipe data string dari database
+    groupedData = filterAndCombineData(data);
+    //console.log(groupedData);
+    const filteredData = groupedData.filter(item => item.vibration === 1);
+    const totalFlushed = filteredData.reduce((total, item) => total + item.vibration, 0);
     console.log(totalFlushed);
   
     // Update the total displayed in HTML
@@ -53,4 +21,31 @@ async function updateProgressBar() {
   
   // Call the updateProgressBar function to update the progress bar with total users
   updateProgressBar();
+
+  function filterAndCombineData(data) {
+    const result = {};
+
+    data.forEach((item) => {
+      const key = `${item.personCount}_${item.userDate}`;
+
+      if (!result[key]) {
+        result[key] = {
+          personCount: item.personCount,
+          userDate: item.userDate,
+          vibration: Number(item.vibration),
+        };
+      } else {
+        // Jika nilai vibration sebelumnya sudah 1, biarkan tetap 1
+        if (result[key].vibration === 0 && item.vibration === "1") {
+          result[key].vibration = 1;
+        }
+      }
+    });
+    //console.log(result);
+    // Convert result object to array
+    const filteredData = Object.values(result);
+
+    return filteredData;
+  }
+
   
