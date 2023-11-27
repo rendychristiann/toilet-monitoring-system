@@ -1,5 +1,6 @@
 This project was created to monitor toilet users ethics in either flushing or not flushing the toilet after being used. This project was created using ESP32, vibration sensor (to monitor flush system behavior), and ultrasonic sensor (to monitor toilet user presence)
-This project can be accessed via: fluzzteam.tech
+
+This project can be accessed via: [https://fluzzteam.tech](https://fluzzteam.tech/)
 
 ![image](https://github.com/rendychristiann/toilet-monitoring-system/assets/78911479/3df15bc4-fd03-4af7-860e-e548a118ee51)
 
